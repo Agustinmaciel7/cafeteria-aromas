@@ -1,0 +1,80 @@
+/* ==========================================
+   CONFIGURACIÓN GENERAL Y FUENTES
+   ========================================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+/* fuente: 'Poppins', sans-serif */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fdfbf7;
+  color: #3e2723;
+}
+
+/* ==========================================
+   ENCABEZADO Y NAVEGACIÓN
+   ========================================== */
+.header-principal {
+  background-color: #4a2c2a;
+  text-align: center;
+}
+
+.logo-header {
+  height: 60px;
+
+}
+
+.nav-principal ul {
+  list-style: none; 
+}
+
+
+.nav-link {
+  color: #fdfbf7;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: #d7ccc8;
+}
+
+/* ==========================================
+SECCIONES Y CONTENIDO PRINCIPAL
+   ========================================== */
+.main-contenido {
+  width: 80%;
+}
+
+.titulo-principal {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a2c2a;
+}
+
+.seccion-contenido {
+  background-color: #ffffff;
+}
+
+
+.subtitulo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a2c2a;
+}
+
+.texto-parrafo {
+  font-size: 1rem;
+  color: #3e2723;
+  line-height: 1.5;
+}
+
+/* ==========================================
+PIE DE PÁGINA
+   ========================================== */
+.footer-principal {
+  background-color: #4a2c2a;
+  color: #fdfbf7;
+  text-align: center;
+}
+.texto-footer {
+  font-size: 0.9rem;
+}
