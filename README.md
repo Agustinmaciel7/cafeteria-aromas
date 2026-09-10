@@ -1,42 +1,47 @@
 # Proyecto de Cursada - Desarrollo Web Full Stack
 
-¡Bienvenido/a a mi repositorio! Este proyecto forma parte de mi formación en la cursada de Desarrollo Web Full Stack. 
+¡Bienvenido/a a mi repositorio! Este proyecto forma parte de mi formación en la cursada de Desarrollo Web Full Stack en Coderhouse.
 
-La página se actualiza semanalmente a medida que avanzo en las clases y aplico nuevos módulos, técnicas y tecnologías aprendidas.
+La página se actualiza semanalmente a medida que avanzo en las clases y aplico nuevos módulos, técnicas y estándares de maquetación aprendidos.
 
 ---
 
 ## Estado del Proyecto y Avances
 
-Actualmente el proyecto se encuentra en la fase de maquetación y diseño visual.
+Actualmente el proyecto se encuentra en la fase de estructuración del layout flexible y control de espaciados.
 
 ### Módulos Implementados
 
-- [x] **Estructura HTML5:** Semántica web, maquetación base, formularios y enlaces.
-- [x] **Estilos CSS3:** 
-  - Definición de paleta de colores.
-  - Jerarquía tipográfica (tamaños de fuente, line-height, fuentes externas).
-  - Estilos generales de componentes y reseteo base.
-- [ ] *[Próximamente]* Layouts avanzados (Flexbox / CSS Grid).
+- [x] **Estructura HTML5:** Semántica web, maquetación base, formularios, figuras y navegación entre páginas.
+- [x] **Estilos CSS3 (Introducción & Selectores):** 
+  - Definición de paleta de colores y variables básicas.
+  - Jerarquía tipográfica (Google Fonts 'Poppins').
+  - Manejo de especificidad, cascada y orden de reglas.
+- [x] **Layouts & Espaciado (Box Model & Flexbox):**
+  - Reseteo global del Box Model (`* { margin: 0; padding: 0; box-sizing: border-box; }`).
+  - Barra de navegación (`<header>` / `<nav>`) maquetada con **Flexbox**, alineando logo y menú en extremos opuestos (`justify-content: space-between`, `align-items: center`).
+  - Disposición de secciones y tarjetas organizadas mediante **Flexbox** y espaciados uniformes con `gap`.
+  - Aplicación consciente de `padding` mínimo de 20px y `margin` para respiración y límites claros del contenido.
+- [ ] *[Próximamente]* Layouts avanzados (CSS Grid).
 - [ ] *[Próximamente]* Diseño Responsive (Media Queries).
 - [ ] *[Próximamente]* Lógica e interacción con JavaScript.
 
 ---
 
-## Tecnologías Utilizadas
+## Estructura del Sitio
 
-* **HTML5** — Estructuración semántica del contenido.
-* **CSS3** — Estilos visuales, tipografía y paleta de colores.
-* **Git & GitHub** — Control de versiones y alojamiento del código.
+El proyecto cuenta con una estructura limpia organizada en subcarpetas:
 
----
-
-## Frecuencia de Actualización
-
-* **Entregas:** Semanales (1 commit/push por semana con las novedades de la clase).
-
----
-
-## Autor
-
-* **Agustín** — *Desarrollador en formación*
+```text
+/
+├── index.html
+├── styles/
+│   └── styles.css
+├── assets/
+│   ├── LOGO-CAFETERIA.jpg
+│   └── ... (imágenes del sitio)
+└── pages/
+    ├── sobre-mi.html
+    ├── servicios.html       (Preguntas Frecuentes)
+    ├── proyectos.html       (Menú)
+    └── contacto.html
