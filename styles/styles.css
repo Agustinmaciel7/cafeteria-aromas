@@ -2,6 +2,7 @@
 1. CONFIGURACIÓN GLOBAL Y RESET (Box Model)
    ========================================== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -21,7 +22,6 @@ body {
 .header-principal {
   background-color: #4a2c2a;
   padding: 20px;
-  /* Flexbox para alinear logo y navegación en extremos opuestos */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,6 @@ body {
   height: 60px;
 }
 
-/* Contenedor de enlaces como flex container con gap */
 .nav-principal ul {
   display: flex;
   list-style: none;
@@ -47,53 +46,59 @@ body {
 }
 
 /* ==========================================
-3. CONTENIDO PRINCIPAL Y SECCIONES (Flexbox + Box Model)
+3. CONTENIDO PRINCIPAL Y SECCIONES (Mobile-First con CSS Grid)
    ========================================== */
 .main-contenido {
   width: 90%;
   max-width: 1200px;
-  margin: 20px auto; /* Centrado con margen */
+  margin: 20px auto;
 }
 
 .titulo-principal {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
   color: #4a2c2a;
   text-align: center;
-  margin-bottom: 20px; /* Margen para separar del contenido */
+  margin-bottom: 20px;
 }
 
-/* Contenedores de secciones usando Flexbox */
+/* Diseño Base Mobile-First: Columnas apiladas */
 .seccion-contenido {
   background-color: #ffffff;
-  padding: 20px; /* Padding de al menos 20px según norma del Box Model */
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Espaciado uniforme con gap */
-}
-
-/* Tarjetas estructuradas con Flexbox */
-.tarjeta-articulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px; /* Gap entre subtítulo, párrafo e imagen */
-  padding: 20px; /* Padding interno */
-  text-align: center;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: 
+    "subtitulo"
+    "parrafo"
+    "imagen";
+  gap: 20px;
+  border-radius: 8px;
 }
 
 .subtitulo {
   font-size: 1.5rem;
   font-weight: 600;
   color: #4a2c2a;
+  grid-area: subtitulo;
 }
 
 .texto-parrafo {
   font-size: 1rem;
   color: #3e2723;
+  grid-area: parrafo;
+}
+
+/* Contenedor flexible interno para múltiples párrafos si los hay */
+.bloque-textos {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  grid-area: parrafo;
 }
 
 figure {
+  grid-area: imagen;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,6 +108,7 @@ figure {
 .imagen-destacada {
   max-width: 100%;
   height: auto;
+  border-radius: 6px;
 }
 
 figcaption {
@@ -123,4 +129,20 @@ figcaption {
 
 .texto-footer {
   font-size: 0.9rem;
+}
+
+/* ==========================================
+5. BREAKPOINT RESPONSIVO PARA ESCRITORIO (min-width: 1024px)
+   ========================================== */
+@media (min-width: 1024px) {
+  .seccion-contenido {
+    /* Grilla de 2 columnas simétricas para evitar escalonados y textos encimados */
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "subtitulo subtitulo"
+      "parrafo imagen";
+    gap: 40px;
+    padding: 40px;
+    align-items: start; /* Alineación superior uniforme para evitar desniveles */
+  }
 }
