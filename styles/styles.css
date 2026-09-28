@@ -10,6 +10,7 @@
 
 /* FONT:'Poppins',Sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fdfbf7;
@@ -23,20 +24,25 @@ body {
 /* ==========================================
 2. ESTADOS INTERACTIVOS Y TRANSICIONES
    ========================================== */
-a, button, .btn, .tarjeta-articulo, .nav-link {
+a,
+button,
+.btn,
+.tarjeta-articulo,
+.nav-link {
   transition: all 0.3s ease;
 }
 
-.main-contenido a:hover, 
-.main-contenido a:focus, 
-.seccion-contenido .btn:hover, 
+.main-contenido a:hover,
+.main-contenido a:focus,
+.seccion-contenido .btn:hover,
 .seccion-contenido .btn:focus {
   color: #d7ccc8;
   outline: none;
   text-decoration: none;
 }
 
-a:active, .btn:active {
+a:active,
+.btn:active {
   transform: scale(0.95);
 }
 
@@ -86,7 +92,7 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
 /* Ajustes del Carousel */
 .carousel-inner {
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item img {
@@ -126,7 +132,7 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  display: block; 
+  display: block;
   width: 100%;
 }
 
@@ -145,7 +151,7 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
 .tarjeta-articulo:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  background-color: #f2ebe1; 
+  background-color: #f2ebe1;
 }
 
 .subtitulo {
@@ -222,11 +228,59 @@ figcaption {
   .seccion-grid-dos-columnas {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
+    grid-template-areas:
       "subtitulo subtitulo"
       "parrafo imagen";
     gap: 40px;
     padding: 40px;
     align-items: start;
+  }
+}
+
+/* ==========================================
+   CAROUSEL EN MOBILE (Ajuste de visibilidad y texto)
+   ========================================== */
+.carousel-caption {
+  background: rgba(74, 44, 42, 0.85);
+  /* Fondo oscuro semitransparente institucional */
+  border-radius: 8px;
+  padding: 10px 12px;
+  bottom: 15px;
+  left: 5%;
+  right: 5%;
+}
+
+.carousel-caption h5 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #fdfbf7;
+}
+
+.carousel-caption p {
+  font-size: 0.85rem;
+  margin-bottom: 0;
+  color: #fdfbf7;
+  line-height: 1.2;
+}
+
+/* Adaptación para pantallas chicas (mobile) */
+@media (max-width: 576px) {
+  .carousel-item img {
+    height: 320px;
+    /* Reducimos la altura en celulares para mejor visibilidad */
+  }
+
+  .carousel-caption {
+    padding: 8px 10px;
+    bottom: 10px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 0.95rem;
+  }
+
+  .carousel-caption p {
+    font-size: 0.75rem;
   }
 }
