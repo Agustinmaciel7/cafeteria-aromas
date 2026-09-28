@@ -6,8 +6,8 @@
 
 ## 🔗 Enlaces del Proyecto
 
-* **Repositorio de GitHub:** [https://github.com/Agustinmaciel7/cafeteria-aromas](https://github.com/Agustinmaciel7/cafeteria-aromas)
-* **Sitio Desplegado:** *(Agregá aquí el link de tu sitio si ya lo publicaste en GitHub Pages, Netlify o Vercel)*
+* **Repositorio de GitHub:** [Ver Repositorio en GitHub](https://github.com/Agustinmaciel7/cafeteria-aromas)
+* **Sitio Desplegado:** [Ver Sitio Web en GitHub Pages](https://agustinmaciel7.github.io/cafeteria-aromas/)
 
 ---
 
