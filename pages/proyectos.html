@@ -38,39 +38,66 @@
     <section class="seccion-contenido d-block">
       <h1 class="titulo-principal mb-5">Preguntas Frecuentes</h1>
 
-      <div class="row">
+      <div class="row align-items-center">
         <!-- Columna Izquierda: Info e Imagen -->
-        <div class="col-md-6 mb-4 text-center text-md-start">
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start">
           <h2 class="subtitulo mb-3">Resolvemos tus dudas habituales</h2>
           <p class="texto-parrafo mb-4">Queremos que tu visita a Cafetería Aromas sea perfecta de principio a fin. Por
-            eso, reunimos las consultas más comunes que nos hacen nuestros clientes acerca de nuestros horarios,
-            servicios y opciones especiales en el local.</p>
+            eso, reunimos las consultas más comunes acerca de nuestros horarios, servicios y opciones especiales en el
+            local.</p>
           <img src="../assets/foto_preguntas_frecuentes.jpg" alt="Sección de preguntas frecuentes"
             class="imagen-destacada shadow-sm">
         </div>
 
-        <!-- Columna Derecha: Formulario de Dudas -->
-        <div class="col-md-6 d-flex align-items-center">
+        <!-- Columna Derecha: Formulario Mejorado de Dudas -->
+        <div class="col-md-6">
           <div class="card w-100 border-0 shadow-sm p-4 tarjeta-articulo">
             <h3 class="subtitulo mb-4 text-center">¿Tenés otra consulta?</h3>
+
             <form class="text-start w-100">
-              <div class="mb-3">
-                <label for="nombreUsuario" class="form-label texto-destacado">Nombre completo</label>
+
+              <!-- Campo: Nombre completo (Floating Label) -->
+              <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre" required>
+                <label for="nombreUsuario">Nombre completo</label>
               </div>
-              <div class="mb-3">
-                <label for="emailUsuario" class="form-label texto-destacado">Correo electrónico</label>
+
+              <!-- Campo: Correo electrónico (Floating Label) -->
+              <div class="form-floating mb-3">
                 <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com" required>
+                <label for="emailUsuario">Correo electrónico</label>
               </div>
-              <div class="mb-3">
-                <label for="dudaUsuario" class="form-label texto-destacado">Tu duda</label>
-                <textarea class="form-control" id="dudaUsuario" rows="4" placeholder="Escribí tu consulta acá..."
-                  required></textarea>
+
+              <!-- Select para Motivo de Consulta -->
+              <div class="form-floating mb-3">
+                <select class="form-select" id="motivoConsulta" aria-label="Seleccionar motivo de consulta">
+                  <option selected value="1">Consulta general</option>
+                  <option value="2">Reservas y Eventos</option>
+                  <option value="3">Opciones sin TACC / Veganas</option>
+                  <option value="4">Sugerencias o comentarios</option>
+                </select>
+                <label for="motivoConsulta">Motivo de tu consulta</label>
               </div>
-              <!-- Botón limpio usando las clases generales de tu CSS -->
-              <button type="submit" class="btn w-100" style="background-color: #4a2c2a; color: #fdfbf7;">Enviar
-                consulta</button>
+
+              <!-- Campo: Mensaje / Duda (Floating Label) -->
+              <div class="form-floating mb-3">
+                <textarea class="form-control" id="dudaUsuario" placeholder="Escribí tu consulta acá..."
+                  style="height: 110px" required></textarea>
+                <label for="dudaUsuario">Tu duda o mensaje</label>
+              </div>
+
+              <!--Checkbox Novedades -->
+              <div class="form-check mb-3">
+                <input class="form-check-input" type="checkbox" value="" id="checkNovedades" checked>
+                <label class="form-check-label texto-parrafo" for="checkNovedades" style="font-size: 0.85rem;">
+                  Quiero recibir novedades y promociones en mi email.
+                </label>
+              </div>
+
+              <!-- Botón estilizado con clase de CSS -->
+              <button type="submit" class="btn btn-cafe w-100 py-2">Enviar consulta</button>
             </form>
+
           </div>
         </div>
       </div>
