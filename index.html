@@ -44,34 +44,45 @@
       </article>
 
       <!-- Componente Bootstrap: Cards -->
-      <div class="container mt-4">
-        <div class="row text-center">
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 border-0 shadow-sm tarjeta-articulo">
-              <div class="card-body">
-                <h5 class="card-title subtitulo">Desayunos</h5>
-                <p class="card-text texto-parrafo">Empezá tu mañana con opciones ricas y saludables.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 border-0 shadow-sm tarjeta-articulo">
-              <div class="card-body">
-                <h5 class="card-title subtitulo">Almuerzos</h5>
-                <p class="card-text texto-parrafo">Sándwiches de miga, ensaladas y tartas caseras.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3">
-            <div class="card h-100 border-0 shadow-sm tarjeta-articulo">
-              <div class="card-body">
-                <h5 class="card-title subtitulo">Meriendas</h5>
-                <p class="card-text texto-parrafo">El maridaje ideal para acompañar tu taza de café.</p>
-              </div>
-            </div>
-          </div>
+      <!-- Componente Bootstrap Extra: Cards con Badges -->
+<div class="container mt-4">
+  <div class="row text-center">
+    
+    <!-- Tarjeta 1 -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-0 shadow-sm tarjeta-articulo position-relative">
+        <div class="card-body">
+          <span class="badge rounded-pill bg-danger mb-2">Más Vendido</span>
+          <h5 class="card-title subtitulo">Desayunos</h5>
+          <p class="card-text texto-parrafo">Empezá tu mañana con opciones ricas y saludables.</p>
         </div>
       </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-0 shadow-sm tarjeta-articulo position-relative">
+        <div class="card-body">
+          <span class="badge rounded-pill bg-success mb-2">Próximamente!</span>
+          <h5 class="card-title subtitulo">Almuerzos</h5>
+          <p class="card-text texto-parrafo">Sándwiches de miga, ensaladas y tartas caseras.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="col-md-4 mb-3">
+      <div class="card h-100 border-0 shadow-sm tarjeta-articulo position-relative">
+        <div class="card-body">
+          <span class="badge rounded-pill bg-warning text-dark mb-2">Recomendado</span>
+          <h5 class="card-title subtitulo">Meriendas</h5>
+          <p class="card-text texto-parrafo">El maridaje ideal para acompañar tu taza de café.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
     </section>
   </main>
 
