@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Cafetería Aromas</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/LOGO-CAFETERIA.jpg" alt="Logo Cafetería Aromas" class="logo-header">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="proyectos.html">Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-contenido">
+    <section class="seccion-contenido">
+      <h1 class="titulo-principal">Nuestro Menú Especial</h1>
+      <p class="texto-parrafo text-center mx-auto">Descubrí nuestros productos estrella, elaborados con materia prima de primera calidad y mucho amor.</p>
+
+      <!-- Carousel de Bootstrap -->
+      <div id="carouselMenu" class="carousel slide mx-auto" data-bs-ride="carousel" style="max-width: 800px;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active" data-bs-interval="4000">
+            <img src="../assets/carousel-espresso.jpg" class="d-block w-100 imagen-destacada" alt="Espresso Perfecto">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Espresso Perfecto</h5>
+              <p>Un clásico intenso y aromático para empezar el día con energía.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="../assets/carousel-capuchino.jpg" class="d-block w-100 imagen-destacada" alt="Capuchino Cremoso">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Capuchino Cremoso</h5>
+              <p>Equilibrio perfecto entre espresso, leche vaporizada y suave espuma.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="../assets/carousel-flatwhite.jpg" class="d-block w-100 imagen-destacada" alt="Flat White de Especialidad">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Flat White</h5>
+              <p>Doble ristretto intenso cubierto con una fina capa de leche texturizada.</p>
+            </div>
+          </div>
+          <div class="carousel-item" data-bs-interval="4000">
+            <img src="../assets/carousel-avocadotoast.jpg" class="d-block w-100 imagen-destacada" alt="Avocado Toast">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Avocado Toast</h5>
+              <p>Pan de masa madre, palta pisada fresca, tomates cherry confitados y mix de semillas.</p>
+            </div>
+          </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMenu" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMenu" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Siguiente</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-principal">
+    <p class="texto-footer">&copy; 2026 Cafetería Aromas. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

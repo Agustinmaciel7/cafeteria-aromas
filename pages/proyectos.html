@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - Cafetería Aromas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+          <img src="../assets/LOGO-CAFETERIA.jpg" alt="Logo Cafetería Aromas" class="logo-header">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobre-mi.html">Sobre Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="servicios.html">Menú</a></li>
+            <li class="nav-item"><a class="nav-link" href="proyectos.html">Preguntas Frecuentes</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="main-contenido">
+    <section class="seccion-contenido d-block">
+      <h1 class="titulo-principal mb-5">Preguntas Frecuentes</h1>
+      
+      <div class="row">
+        <!-- Columna Izquierda: Info e Imagen -->
+        <div class="col-md-6 mb-4 text-center text-md-start">
+          <h2 class="subtitulo mb-3">Resolvemos tus dudas habituales</h2>
+          <p class="texto-parrafo mb-4">Queremos que tu visita a Cafetería Aromas sea perfecta de principio a fin. Por eso, reunimos las consultas más comunes que nos hacen nuestros clientes acerca de nuestros horarios, servicios y opciones especiales en el local.</p>
+          <img src="../assets/foto_preguntas_frecuentes.jpg" alt="Sección de preguntas frecuentes" class="imagen-destacada shadow-sm">
+        </div>
+        
+        <!-- Columna Derecha: Formulario de Dudas -->
+        <div class="col-md-6 d-flex align-items-center">
+          <div class="card w-100 border-0 shadow-sm p-4 tarjeta-articulo">
+            <h3 class="subtitulo mb-4 text-center">¿Tenés otra consulta?</h3>
+            <form class="text-start w-100">
+              <div class="mb-3">
+                <label for="nombreUsuario" class="form-label texto-destacado">Nombre completo</label>
+                <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre" required>
+              </div>
+              <div class="mb-3">
+                <label for="emailUsuario" class="form-label texto-destacado">Correo electrónico</label>
+                <input type="email" class="form-control" id="emailUsuario" placeholder="nombre@ejemplo.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="dudaUsuario" class="form-label texto-destacado">Tu duda</label>
+                <textarea class="form-control" id="dudaUsuario" rows="4" placeholder="Escribí tu consulta acá..." required></textarea>
+              </div>
+              <!-- Botón limpio usando las clases generales de tu CSS -->
+              <button type="submit" class="btn w-100" style="background-color: #4a2c2a; color: #fdfbf7;">Enviar consulta</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer-principal mt-auto">
+    <p class="texto-footer mb-0">&copy; 2026 Cafetería Aromas. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
