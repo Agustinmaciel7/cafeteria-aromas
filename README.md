@@ -1,58 +1,57 @@
 # ☕ Cafetería Aromas - Sitio Web Institucional
 
-¡Bienvenido/a a mi repositorio! Este proyecto forma parte de mi formación en el curso de **Desarrollo Web Full Stack en Coderhouse** (Pre-entrega: Estructura avanzada y control de versiones con GitHub).
+¡Bienvenido/a a mi repositorio! Este proyecto forma parte de mi formación en el curso de **Desarrollo Web Full Stack en Coderhouse** (Entrega: Arquitectura SCSS y Refactorización Completa)[cite: 2].
 
 ---
 
 ## 🔗 Enlaces del Proyecto
 
-* **Repositorio de GitHub:** [Ver Repositorio en GitHub](https://github.com/Agustinmaciel7/cafeteria-aromas)
-* **Sitio Desplegado:** [Ver Sitio Web en GitHub Pages](https://agustinmaciel7.github.io/cafeteria-aromas/)
+* **Repositorio de GitHub:** [https://github.com/Agustinmaciel7/cafeteria-aromas](https://github.com/Agustinmaciel7/cafeteria-aromas)[cite: 7]
+* **Sitio Desplegado:** [https://agustinmaciel7.github.io/cafeteria-aromas/](https://agustinmaciel7.github.io/cafeteria-aromas/)
 
 ---
 
-## 🚀 Estado del Proyecto y Avances Actuales
+## 🚀 Estado del Proyecto y Refactorización SCSS
 
-El proyecto integra de forma progresiva las buenas prácticas de maquetación semántica, estilos unificados y componentes interactivos responsivos.
+El sitio ha sido refactorizado por completo migrando de CSS manual a una arquitectura modular en **Sass (SCSS)** organizada en partials y compilada de forma automática.
 
-### Módulos e Innovaciones Implementadas
+### 🛠️ Características Principales de la Refactorización
 
-- [x] **Estructura HTML5 Semántica:** Código limpio con indentación jerárquica y navegación fluida entre `index.html` y las 4 páginas secundarias (`/pages/`).
-- [x] **Estilos CSS3 Personalizados & Especificidad Limpia:**
-  - Reseteo universal del Box Model (`* { margin: 0; padding: 0; box-sizing: border-box; }`).
-  - Paleta de colores corporativos e integración de Google Fonts (*Poppins*).
-  - Transiciones suaves (`transition: all 0.3s ease`), estados interactivos (`:hover`, `:active`) y **ausencia total de estilos `inline`**.
-- [x] **Integración y Personalización de Bootstrap (v5.3+ vía CDN):**
-  - **Navbar responsiva:** Menú hamburguesa funcional con diseño corporativo unificado.
-  - **Carrusel de especialidades:** Optimizado con captions visibles y lectura adaptada a pantallas chicas (*Mobile-First*).
-  - **Componente Badges:** Incorporación de insignias distintivas (*"Más Vendido"*, *"Próximamente!"*, *"Recomendado"*) en las tarjetas de la página de inicio para mejorar la jerarquía visual.
-  - **Formularios Interactivos:** Uso de componentes nativos como **Floating Labels**, **Form Select** para categorización de consultas y **Form Check** sin sobrecargar la hoja de CSS.
-- [x] **Diseño Responsivo (Mobile-First):** Vistas completamente adaptadas a móviles y escritorio con Breakpoints en media queries.
-- [x] **Control de Versiones Profesional con Git & GitHub:** Historial de commits descriptivos por consola respetando convenciones habituales (`feat:`, `style:`, `refactor:`).
+- [x] **Zero CSS Manual:** Todo el CSS final se genera exclusivamente por la compilación de archivos `.scss`.
+- [x] **Estructura Modular Obligatoria:**
+  - `utilities/`: Variables de colores, fuentes y sombras (`_variables.scss`) y mixins reutilizables (`_mixins.scss`)[cite: 1].
+  - `base/`: Reseteo universal (`_base.scss`) y tipografía global (`_tipografia.scss`)[cite: 1].
+  - `layout/`: Estilos de header, footer y personalización de Navbar de Bootstrap (`_header.scss`, `_footer.scss`, `_nav.scss`)[cite: 1].
+  - `components/`: Partials para elementos repetibles (`_buttons.scss`, `_cards.scss`)[cite: 1].
+- [x] **Archivo Maestro `main.scss`:** Único punto de entrada que organiza la compilación mediante la directiva `@use`[cite: 1, 2].
+- [x] **Fidelidad Visual:** El sitio conserva exactamente su diseño y estética previa[cite: 1, 2].
 
 ---
 
-## 📁 Estructura de Archivos y Rutas Relativas
+## 📁 Estructura del Proyecto
 
 ```text
 /
-├── index.html                  # Página de inicio con tarjetas y badges
-├── README.md                   # Documentación principal del repositorio
+├── index.html                  # Página de inicio principal
+├── README.md                   # Documentación del repositorio
 ├── styles/
-│   └── styles.css              # Hoja de estilos unificada y depurada
-├── assets/                     # Recursos gráficos e imágenes del sitio
-│   ├── LOGO-CAFETERIA.jpg
-│   ├── foto_nuestro_local.jpg
-│   ├── foto_el_equipo.jpg
-│   ├── foto_menu.jpg
-│   ├── foto_preguntas_frecuentes.jpg
-│   ├── foto_contacto.jpg
-│   ├── carousel-espresso.jpg
-│   ├── carousel-capuchino.jpg
-│   ├── carousel-flatwhite.jpg
-│   └── carousel-avocadotoast.jpg
-└── pages/                      # Páginas secundarias del sitio
-    ├── sobre-mi.html           # Sobre Nosotros / Historia del local
-    ├── servicios.html          # Menú y especialidades (Carrusel)
-    ├── proyectos.html          # Preguntas Frecuentes y Formulario interactivo
-    └── contacto.html           # Canales de atención y tarjetas de contacto
+│   └── styles.css              # CSS compilado por Sass
+├── scss/                       # Código fuente SCSS
+│   ├── main.scss              # Punto de entrada principal (@use)
+│   ├── utilities/
+│   │   ├── _variables.scss
+│   │   └── _mixins.scss
+│   ├── base/
+│   │   ├── _tipografia.scss
+│   │   └── _base.scss
+│   ├── layout/
+│   │   ├── _header.scss
+│   │   ├── _nav.scss
+│   │   └── _footer.scss
+│   └── components/
+│       ├── _buttons.scss
+│       └── _cards.scss
+├── assets/                     # Recursos gráficos e imágenes institucionales
+└── pages/                      # Páginas secundarias (sobre-mi, servicios, proyectos, contacto)
+🛠️ Tecnologías UtilizadasHTML5 & CSS3Sass / SCSS (Compilador vía Node.js)[cite: 1, 2]Bootstrap v5.3+ (CDN)[cite: 1]Git & GitHub   
+Autor Agustín — Desarrollador Web en formación
