@@ -1,0 +1,39 @@
+@use "../utilities/variables" as *;
+
+.tarjeta-articulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: $color-fondo;
+  border-radius: $radio-borde;
+  margin: 0 auto;
+  transition: $transicion-suave;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $sombra-hover;
+    background-color: #f2ebe1;
+  }
+}
+
+// Componentes del Carousel de Bootstrap
+.carousel-inner {
+  border-radius: $radio-borde;
+  box-shadow: $sombra-suave;
+}
+
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: $radio-borde;
+}
+
+.carousel-caption {
+  background: rgba(74, 44, 42, 0.7);
+  border-radius: $radio-borde;
+  padding: 15px;
+}

@@ -1,0 +1,21 @@
+@use "../utilities/variables" as *;
+
+.btn {
+  transition: $transicion-suave;
+
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+.btn-cafe {
+  background-color: $color-primario;
+  color: $color-fondo;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $color-secundario;
+    color: $color-acento;
+  }
+}

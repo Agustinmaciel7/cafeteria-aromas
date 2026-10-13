@@ -1,123 +1,4 @@
-/* ==========================================
-1. CONFIGURACIÓN GLOBAL Y RESET (Box Model)
-   ========================================== */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* FONT:'Poppins',Sans-serif */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #fdfbf7;
-  color: #3e2723;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-/* ==========================================
-2. ESTADOS INTERACTIVOS Y TRANSICIONES
-   ========================================== */
-a,
-button,
-.btn,
-.tarjeta-articulo,
-.nav-link {
-  transition: all 0.3s ease;
-}
-
-.main-contenido a:hover,
-.main-contenido a:focus,
-.seccion-contenido .btn:hover,
-.seccion-contenido .btn:focus {
-  color: #d7ccc8;
-  outline: none;
-  text-decoration: none;
-}
-
-a:active,
-.btn:active {
-  transform: scale(0.95);
-}
-
-/* ==========================================
-3. NAVBAR Y COMPONENTES BOOTSTRAP
-   ========================================== */
-nav.navbar.navbar-custom {
-  background-color: #4a2c2a;
-  padding: 8px 20px;
-}
-
-nav.navbar.navbar-custom .navbar-brand {
-  padding: 0;
-}
-
-.logo-header {
-  height: 45px;
-  width: auto;
-  object-fit: contain;
-  border-radius: 30px;
-}
-
-.navbar-custom .navbar-nav .nav-link {
-  color: #fdfbf7;
-  font-weight: 600;
-  font-size: 1.1rem;
-  margin: 0 10px;
-}
-
-.navbar-custom .navbar-nav .nav-link:hover,
-.navbar-custom .navbar-nav .nav-link:focus {
-  color: #d7ccc8;
-}
-
-.navbar-custom .navbar-nav .nav-link:active {
-  transform: scale(0.95);
-}
-
-nav.navbar.navbar-custom .navbar-toggler {
-  border-color: rgba(253, 251, 247, 0.5);
-}
-
-nav.navbar.navbar-custom .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(253, 251, 247, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Ajustes del Carousel */
-.carousel-inner {
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-item img {
-  height: 450px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: 8px;
-}
-
-.carousel-caption {
-  background: rgba(74, 44, 42, 0.7);
-  border-radius: 8px;
-  padding: 15px;
-}
-
-/* ==========================================
-4. CONTENIDO PRINCIPAL Y SECCIONES
-   ========================================== */
-.main-contenido {
-  width: 90%;
-  max-width: 1200px;
-  margin: 2rem auto;
-  flex: 1;
-}
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 .titulo-principal {
   font-size: 2.2rem;
   font-weight: 700;
@@ -125,33 +6,6 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   text-align: center;
   margin: 0 auto 2rem auto;
   width: 100%;
-}
-
-.seccion-contenido {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  display: block;
-  width: 100%;
-}
-
-.tarjeta-articulo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 15px;
-  padding: 20px;
-  background-color: #fdfbf7;
-  border-radius: 8px;
-  margin: 0 auto;
-}
-
-.tarjeta-articulo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  background-color: #f2ebe1;
 }
 
 .subtitulo {
@@ -166,6 +20,50 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.texto-destacado {
+  color: #4a2c2a;
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fdfbf7;
+  color: #3e2723;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+a:active {
+  transform: scale(0.95);
+}
+
+.main-contenido {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+  flex: 1;
+}
+
+.seccion-contenido {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  display: block;
+  width: 100%;
 }
 
 figure {
@@ -187,27 +85,45 @@ figcaption {
   color: #6d4c41;
 }
 
-/* Clases auxiliares para formularios y tarjetas de contacto */
-.texto-destacado {
-  color: #4a2c2a;
-  font-weight: 600;
-}
-
-.btn-cafe {
+.header-principal {
   background-color: #4a2c2a;
-  color: #fdfbf7;
-  border: none;
 }
 
-.btn-cafe:hover,
-.btn-cafe:focus {
-  background-color: #3e2723;
+nav.navbar.navbar-custom {
+  background-color: #4a2c2a;
+  padding: 8px 20px;
+}
+nav.navbar.navbar-custom .navbar-brand {
+  padding: 0;
+}
+nav.navbar.navbar-custom .navbar-toggler {
+  border-color: rgba(253, 251, 247, 0.5);
+}
+nav.navbar.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(253, 251, 247, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.logo-header {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 30px;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+  color: #fdfbf7;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+}
+.navbar-custom .navbar-nav .nav-link:hover, .navbar-custom .navbar-nav .nav-link:focus {
   color: #d7ccc8;
 }
+.navbar-custom .navbar-nav .nav-link:active {
+  transform: scale(0.95);
+}
 
-/* ==========================================
-5. PIE DE PÁGINA
-   ========================================== */
 .footer-principal {
   background-color: #4a2c2a;
   color: #fdfbf7;
@@ -221,66 +137,57 @@ figcaption {
   font-size: 0.9rem;
 }
 
-/* ==========================================
-6. BREAKPOINTS Y GRILLAS ESPECÍFICAS
-   ========================================== */
-@media (min-width: 1024px) {
-  .seccion-grid-dos-columnas {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "subtitulo subtitulo"
-      "parrafo imagen";
-    gap: 40px;
-    padding: 40px;
-    align-items: start;
-  }
+.btn {
+  transition: all 0.3s ease;
+}
+.btn:active {
+  transform: scale(0.95);
 }
 
-/* ==========================================
-   CAROUSEL EN MOBILE (Ajuste de visibilidad y texto)
-   ========================================== */
-.carousel-caption {
-  background: rgba(74, 44, 42, 0.85);
-  /* Fondo oscuro semitransparente institucional */
+.btn-cafe {
+  background-color: #4a2c2a;
+  color: #fdfbf7;
+  border: none;
+}
+.btn-cafe:hover, .btn-cafe:focus {
+  background-color: #3e2723;
+  color: #d7ccc8;
+}
+
+.tarjeta-articulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #fdfbf7;
   border-radius: 8px;
-  padding: 10px 12px;
-  bottom: 15px;
-  left: 5%;
-  right: 5%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+.tarjeta-articulo:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  background-color: #f2ebe1;
 }
 
-.carousel-caption h5 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: #fdfbf7;
+.carousel-inner {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.carousel-caption p {
-  font-size: 0.85rem;
-  margin-bottom: 0;
-  color: #fdfbf7;
-  line-height: 1.2;
+.carousel-item img {
+  height: 450px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
 }
 
-/* Adaptación para pantallas chicas (mobile) */
-@media (max-width: 576px) {
-  .carousel-item img {
-    height: 320px;
-    /* Reducimos la altura en celulares para mejor visibilidad */
-  }
-
-  .carousel-caption {
-    padding: 8px 10px;
-    bottom: 10px;
-  }
-
-  .carousel-caption h5 {
-    font-size: 0.95rem;
-  }
-
-  .carousel-caption p {
-    font-size: 0.75rem;
-  }
+.carousel-caption {
+  background: rgba(74, 44, 42, 0.7);
+  border-radius: 8px;
+  padding: 15px;
 }
+
+/*# sourceMappingURL=styles.css.map */
