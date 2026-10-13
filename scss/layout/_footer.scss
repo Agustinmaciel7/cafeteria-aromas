@@ -1,14 +1,14 @@
 @use "../utilities/variables" as *;
 
 .footer-principal {
-  background-color: $color-primario;
-  color: $color-fondo;
-  text-align: center;
-  padding: 1.2rem;
-  margin-top: auto;
+    background-color: $color-primario;
+    color: $color-fondo;
+    text-align: center;
+    padding: 1.2rem;
+    margin-top: auto;
 }
 
 .texto-footer {
-  margin: 0;
-  font-size: 0.9rem;
+    margin: 0;
+    font-size: 0.9rem;
 }

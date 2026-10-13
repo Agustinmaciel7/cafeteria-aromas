@@ -3,29 +3,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 .titulo-principal {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: $color-primario;
-  text-align: center;
-  margin: 0 auto 2rem auto;
-  width: 100%;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: $color-primario;
+    text-align: center;
+    margin: 0 auto 2rem auto;
+    width: 100%;
 }
 
 .subtitulo {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: $color-primario;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-primario;
 }
 
 .texto-parrafo {
-  font-size: 1rem;
-  color: $color-secundario;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+    font-size: 1rem;
+    color: $color-secundario;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .texto-destacado {
-  color: $color-primario;
-  font-weight: 600;
+    color: $color-primario;
+    font-weight: 600;
 }
