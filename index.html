@@ -4,7 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafetería Aromas - Inicio</title>
+  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS (Librería de Animaciones) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <!-- CSS Compilado -->
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
@@ -32,57 +36,49 @@
   </header>
 
   <main class="main-contenido">
-    <section class="seccion-contenido">
+    <section class="seccion-contenido" data-aos="fade-down">
       <h1 class="titulo-principal">Bienvenidos a Cafetería Aromas</h1>
       <article class="tarjeta-articulo">
         <h2 class="subtitulo">El mejor café de especialidad</h2>
         <p class="texto-parrafo">Disfruta de una experiencia única con nuestros granos seleccionados y la mejor pastelería artesanal.</p>
-        <figure>
+        <figure data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/foto_nuestro_local.jpg" alt="Vista de nuestro local" class="imagen-destacada">
           <figcaption>Nuestro acogedor salón principal.</figcaption>
         </figure>
       </article>
 
-      <!-- Componente Bootstrap: Cards -->
-      <!-- Componente Bootstrap Extra: Cards con Badges -->
-<div class="container mt-4">
-  <div class="row text-center">
-    
-    <!-- Tarjeta 1 -->
-    <div class="col-md-4 mb-3">
-      <div class="card h-100 border-0 shadow-sm tarjeta-articulo position-relative">
-        <div class="card-body">
-          <span class="badge rounded-pill bg-danger mb-2">Más Vendido</span>
-          <h5 class="card-title subtitulo">Desayunos</h5>
-          <p class="card-text texto-parrafo">Empezá tu mañana con opciones ricas y saludables.</p>
+      <!-- Cards de Bootstrap con Animación AOS -->
+      <div class="container mt-4">
+        <div class="row text-center">
+          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+            <div class="card h-100 border-0 shadow-sm tarjeta-articulo">
+              <div class="card-body">
+                <span class="badge bg-warning text-dark mb-2">Más Vendido</span>
+                <h5 class="card-title subtitulo">Desayunos</h5>
+                <p class="card-text texto-parrafo">Empezá tu mañana con opciones ricas y saludables.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+            <div class="card h-100 border-0 shadow-sm tarjeta-articulo">
+              <div class="card-body">
+                <span class="badge bg-success mb-2">Recomendado</span>
+                <h5 class="card-title subtitulo">Almuerzos</h5>
+                <p class="card-text texto-parrafo">Sándwiches de miga, ensaladas y tartas caseras.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="300">
+            <div class="card h-100 border-0 shadow-sm tarjeta-articulo">
+              <div class="card-body">
+                <span class="badge bg-info text-dark mb-2">Próximamente!</span>
+                <h5 class="card-title subtitulo">Meriendas</h5>
+                <p class="card-text texto-parrafo">El maridaje ideal para acompañar tu taza de café.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Tarjeta 2 -->
-    <div class="col-md-4 mb-3">
-      <div class="card h-100 border-0 shadow-sm tarjeta-articulo position-relative">
-        <div class="card-body">
-          <span class="badge rounded-pill bg-success mb-2">Próximamente!</span>
-          <h5 class="card-title subtitulo">Almuerzos</h5>
-          <p class="card-text texto-parrafo">Sándwiches de miga, ensaladas y tartas caseras.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Tarjeta 3 -->
-    <div class="col-md-4 mb-3">
-      <div class="card h-100 border-0 shadow-sm tarjeta-articulo position-relative">
-        <div class="card-body">
-          <span class="badge rounded-pill bg-warning text-dark mb-2">Recomendado</span>
-          <h5 class="card-title subtitulo">Meriendas</h5>
-          <p class="card-text texto-parrafo">El maridaje ideal para acompañar tu taza de café.</p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</div>
     </section>
   </main>
 
@@ -90,6 +86,12 @@
     <p class="texto-footer">&copy; 2026 Cafetería Aromas. Todos los derechos reservados.</p>
   </footer>
 
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
 </html>

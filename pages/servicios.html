@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menú - Cafetería Aromas</title>
-  <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
-
 <body>
 
-  <header>
+  <header class="header-principal">
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
           <img src="../assets/LOGO-CAFETERIA.jpg" alt="Logo Cafetería Aromas" class="logo-header">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
-          aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
@@ -36,65 +33,53 @@
   </header>
 
   <main class="main-contenido">
-    <section class="seccion-contenido">
-      <h1 class="titulo-principal">Nuestro Menú Especial</h1>
-      <p class="texto-parrafo text-center mx-auto">Descubrí nuestros productos estrella, elaborados con materia prima de
-        primera calidad y mucho amor.</p>
-
-      <!-- Carousel de Menú Responsivo -->
-      <div id="carouselMenu" class="carousel slide my-4" data-bs-ride="carousel">
+    <h1 class="titulo-principal" data-aos="fade-down">Nuestro Menú</h1>
+    <section class="seccion-contenido" data-aos="fade-up">
+      <h2 class="subtitulo text-center mb-4">Especialidades de la Casa</h2>
+      
+      <!-- Carrusel Bootstrap Completo con 4 Productos y Animación AOS -->
+      <div id="carruselMenu" class="carousel slide shadow-sm rounded overflow-hidden" data-bs-ride="carousel" data-aos="zoom-in" data-aos-delay="150">
         <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="0" class="active" aria-current="true"
-            aria-label="Espresso Perfecto"></button>
-          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="1"
-            aria-label="Capuchino Cremoso"></button>
-          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="2" aria-label="Flat White"></button>
-          <button type="button" data-bs-target="#carouselMenu" data-bs-slide-to="3" aria-label="Avocado Toast"></button>
+          <button type="button" data-bs-target="#carruselMenu" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carruselMenu" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carruselMenu" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carruselMenu" data-bs-slide-to="3" aria-label="Slide 4"></button>
         </div>
-
         <div class="carousel-inner">
-          <!-- Producto 1 -->
           <div class="carousel-item active">
             <img src="../assets/carousel-espresso.jpg" class="d-block w-100" alt="Espresso Perfecto">
-            <div class="carousel-caption">
+            <div class="carousel-caption d-block">
               <h5>Espresso Perfecto</h5>
-              <p>Intenso, equilibrado y con la crema justa de granos seleccionados.</p>
+              <p>Sabor intenso y cuerpo cremoso recién extraído.</p>
             </div>
           </div>
-
-          <!-- Producto 2 -->
           <div class="carousel-item">
             <img src="../assets/carousel-capuchino.jpg" class="d-block w-100" alt="Capuchino Cremoso">
-            <div class="carousel-caption">
+            <div class="carousel-caption d-block">
               <h5>Capuchino Cremoso</h5>
-              <p>Cremosa leche vaporizada combinada con cacao en polvo y espresso.</p>
+              <p>El balance perfecto entre café espresso y leche vaporizada.</p>
             </div>
           </div>
-
-          <!-- Producto 3 -->
           <div class="carousel-item">
             <img src="../assets/carousel-flatwhite.jpg" class="d-block w-100" alt="Flat White de Especialidad">
-            <div class="carousel-caption">
+            <div class="carousel-caption d-block">
               <h5>Flat White de Especialidad</h5>
-              <p>El balance perfecto entre el doble shot de espresso y la leche aterciopelada.</p>
+              <p>Doble ristretto con microespuma de leche sedosa.</p>
             </div>
           </div>
-
-          <!-- Producto 4 -->
           <div class="carousel-item">
-            <img src="../assets/carousel-avocadotoast.jpg" class="d-block w-100" alt="Avocado Toast Clásico">
-            <div class="carousel-caption">
+            <img src="../assets/carousel-avocadotoast.jpg" class="d-block w-100" alt="Avocado Toast">
+            <div class="carousel-caption d-block">
               <h5>Avocado Toast Clásico</h5>
-              <p>Pan de masa madre con palta fresca, huevo poché y semillas tostadas.</p>
+              <p>Pan de masa madre con palta fresca y semillas tostadas.</p>
             </div>
           </div>
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMenu" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carruselMenu" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Anterior</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselMenu" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carruselMenu" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Siguiente</span>
         </button>
@@ -106,8 +91,10 @@
     <p class="texto-footer">&copy; 2026 Cafetería Aromas. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 800, once: true });
+  </script>
 </body>
-
 </html>
