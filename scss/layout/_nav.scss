@@ -1,4 +1,20 @@
-@use "../utilities/variables" as *;
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
+
+// Animación nativa de latido y sombra suave para el logo
+@keyframes latidoLogo {
+
+    0%,
+    100% {
+        box-shadow: 0 0 5px rgba($color-acento, 0.3);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 0 16px rgba($color-acento, 0.85);
+        transform: scale(1.04);
+    }
+}
 
 nav.navbar.navbar-custom {
     background-color: $color-primario;
@@ -17,11 +33,19 @@ nav.navbar.navbar-custom {
     }
 }
 
+// Aplicación de la animación al logo
 .logo-header {
     height: 45px;
     width: auto;
     object-fit: contain;
     border-radius: 30px;
+    animation: latidoLogo 2.5s infinite ease-in-out; // Latido suave constante
+    @include transicion-suave(all, 0.3s, ease);
+
+    &:hover {
+        transform: scale(1.08);
+        box-shadow: 0 0 20px rgba($color-acento, 1);
+    }
 }
 
 .navbar-custom .navbar-nav {
@@ -30,7 +54,7 @@ nav.navbar.navbar-custom {
         font-weight: 600;
         font-size: 1.1rem;
         margin: 0 10px;
-        transition: $transicion-suave;
+        @include transicion-suave(all, 0.3s, ease);
 
         &:hover,
         &:focus {

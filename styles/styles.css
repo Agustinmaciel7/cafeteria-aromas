@@ -119,6 +119,16 @@ figcaption {
   justify-content: center;
 }
 
+@keyframes latidoLogo {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(215, 204, 200, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(215, 204, 200, 0.85);
+    transform: scale(1.04);
+  }
+}
 nav.navbar.navbar-custom {
   background-color: #4a2c2a;
   padding: 8px 20px;
@@ -138,6 +148,12 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   width: auto;
   object-fit: contain;
   border-radius: 30px;
+  animation: latidoLogo 2.5s infinite ease-in-out;
+  transition: all 0.3s ease;
+}
+.logo-header:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 20px #d7ccc8;
 }
 
 .navbar-custom .navbar-nav .nav-link {
