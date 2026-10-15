@@ -140,43 +140,55 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   font-size: 0.9rem;
 }
 
-.btn {
-  transition: all 0.3s ease;
-  border-radius: 8px;
-}
-.btn:active {
-  transform: scale(0.95);
-}
-
 .btn-cafe {
   background-color: #4a2c2a;
   color: #fdfbf7;
   border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
   font-weight: 600;
+  transition: all 0.25s ease-in-out;
 }
 .btn-cafe:hover, .btn-cafe:focus {
   background-color: #3e2723;
   color: #d7ccc8;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  transform: translateY(-2px);
+  transform: scale(1.02);
+}
+s .btn-cafe:active {
+  transform: scale(0.98);
 }
 
+.tarjeta-articulo {
+  border-radius: 8px;
+  background-color: #fdfbf7;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes flotarSutil {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
 .tarjeta-articulo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 15px;
-  padding: 20px;
-  background-color: #fdfbf7;
-  border-radius: 8px;
   margin: 0 auto;
   transition: all 0.3s ease;
 }
 .tarjeta-articulo:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   background-color: #f2ebe1;
+  animation: flotarSutil 1.8s infinite ease-in-out;
 }
 
 .carousel-inner {

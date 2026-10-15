@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="../styles/styles.css">
 </head>
+
 <body>
 
   <header class="header-principal">
@@ -16,7 +18,8 @@
         <a class="navbar-brand" href="../index.html">
           <img src="../assets/LOGO-CAFETERIA.jpg" alt="Logo Cafetería Aromas" class="logo-header">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
+          aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
@@ -35,20 +38,23 @@
   <main class="main-contenido">
     <h1 class="titulo-principal mb-5" data-aos="fade-down">Preguntas Frecuentes</h1>
     <section class="seccion-contenido d-block" data-aos="fade-up">
-      
+
       <div class="row align-items-center">
         <!-- Columna Izquierda: Info e Imagen -->
         <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start" data-aos="fade-right" data-aos-delay="100">
           <h2 class="subtitulo mb-3">Resolvemos tus dudas habituales</h2>
-          <p class="texto-parrafo mb-4">Queremos que tu visita a Cafetería Aromas sea perfecta de principio a fin. Por eso, reunimos las consultas más comunes acerca de nuestros horarios, servicios y opciones especiales en el local.</p>
-          <img src="../assets/foto_preguntas_frecuentes.jpg" alt="Sección de preguntas frecuentes" class="imagen-destacada shadow-sm">
+          <p class="texto-parrafo mb-4">Queremos que tu visita a Cafetería Aromas sea perfecta de principio a fin. Por
+            eso, reunimos las consultas más comunes acerca de nuestros horarios, servicios y opciones especiales en el
+            local.</p>
+          <img src="../assets/foto_preguntas_frecuentes.jpg" alt="Sección de preguntas frecuentes"
+            class="imagen-destacada shadow-sm">
         </div>
 
         <!-- Columna Derecha: Formulario Completo -->
         <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
           <div class="card w-100 border-0 shadow-sm p-4 tarjeta-articulo">
             <h3 class="subtitulo mb-4 text-center">¿Tenés otra consulta?</h3>
-            
+
             <form class="text-start w-100">
               <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nombreUsuario" placeholder="Tu nombre" required>
@@ -71,7 +77,8 @@
               </div>
 
               <div class="form-floating mb-3">
-                <textarea class="form-control" id="dudaUsuario" placeholder="Escribí tu consulta acá..." style="height: 110px" required></textarea>
+                <textarea class="form-control" id="dudaUsuario" placeholder="Escribí tu consulta acá..."
+                  style="height: 110px" required></textarea>
                 <label for="dudaUsuario">Tu duda o mensaje</label>
               </div>
 
@@ -100,4 +107,5 @@
     AOS.init({ duration: 800, once: true });
   </script>
 </body>
+
 </html>

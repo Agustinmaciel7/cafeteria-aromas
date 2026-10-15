@@ -1,20 +1,42 @@
-@use "../utilities/variables" as *;
-@use "../utilities/mixins" as *; // Importamos los mixins para usarlos
+@use '../utilities/variables' as *;
+@use '../utilities/mixins' as *;
 
-.tarjeta-articulo {
-  @include flex-column-center; // Uso de @include para invocar el mixin
-  text-align: center;
-  gap: 15px;
-  padding: 20px;
-  background-color: $color-fondo;
+// Placeholder para herencia de estilos con @extend
+%tarjeta-base {
   border-radius: $radio-borde;
+  background-color: $color-fondo;
+  padding: 20px;
+  text-align: center;
+  box-shadow: $sombra-suave;
+}
+
+// Animación nativa desde SCSS con @keyframes
+@keyframes flotarSutil {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+// Clase de tarjetas aplicando @extend, mixin con parámetros y animación nativa
+.tarjeta-articulo {
+  @extend %tarjeta-base; // Uso obligatorio de @extend
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   margin: 0 auto;
-  transition: $transicion-suave;
+  @include transicion-suave(all, 0.3s, ease); // Mixin con parámetros
 
   &:hover {
-    transform: translateY(-5px);
     box-shadow: $sombra-hover;
-    background-color: $color-tarjeta-bg; // Se reemplaza #f2ebe1 por la variable
+    background-color: $color-tarjeta-bg;
+    animation: flotarSutil 1.8s infinite ease-in-out; // Animación nativa @keyframes
   }
 }
 
@@ -32,7 +54,7 @@
 }
 
 .carousel-caption {
-  background-color: rgba($color-primario, 0.7); // Se usa rgba con la variable $color-primario
+  background-color: rgba($color-primario, 0.7);
   border-radius: $radio-borde;
   padding: 15px;
 }

@@ -1,26 +1,22 @@
-@use "../utilities/variables" as *;
-@use "../utilities/mixins" as *;
-
-.btn {
-    transition: $transicion-suave;
-    border-radius: $radio-borde;
-
-    &:active {
-        transform: scale(0.95);
-    }
-}
+@use '../utilities/mixins' as *;
 
 .btn-cafe {
-    background-color: $color-primario;
-    color: $color-fondo;
+    background-color: #4a2c2a;
+    color: #fdfbf7;
     border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
     font-weight: 600;
+    @include transicion-suave(all, 0.25s, ease-in-out); // Uso de mixin con parámetros
 
     &:hover,
     &:focus {
-        background-color: $color-secundario;
-        color: $color-acento;
-        box-shadow: $sombra-hover;
-        transform: translateY(-2px);
+        background-color: #3e2723;
+        color: #d7ccc8;
+        transform: scale(1.02);
+    }
+s
+    &:active {
+        transform: scale(0.98);
     }
 }
