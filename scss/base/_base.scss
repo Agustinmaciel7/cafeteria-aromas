@@ -77,6 +77,12 @@ figure {
     height: auto;
     object-fit: cover;
     border-radius: $radio-borde;
+
+    // Ajuste de proporciones para reducir el scroll en tablet y escritorio
+    @include respond-to(tablet) {
+        max-width: 680px;
+        max-height: 350px;
+    }
 }
 
 figcaption {

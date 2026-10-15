@@ -25,20 +25,20 @@
   }
 }
 
-// Clase de tarjetas aplicando @extend, mixin con parámetros y animación nativa
+// Clase de tarjeta de artículo común
 .tarjeta-articulo {
-  @extend %tarjeta-base; // Uso obligatorio de @extend
+  @extend %tarjeta-base;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
   margin: 0 auto;
-  @include transicion-suave(all, 0.3s, ease); // Mixin con parámetros
+  @include transicion-suave(all, 0.3s, ease);
 
   &:hover {
     box-shadow: $sombra-hover;
     background-color: $color-tarjeta-bg;
-    animation: flotarSutil 1.8s infinite ease-in-out; // Animación nativa @keyframes
+    animation: flotarSutil 1.8s infinite ease-in-out;
   }
 }
 
@@ -59,4 +59,75 @@
   background-color: rgba($color-primario, 0.7);
   border-radius: $radio-borde;
   padding: 15px;
+}
+
+// ==========================================
+// EFECTO CARD FLIP 3D (GIRO SUAVE Y ELEGANTE)
+// ==========================================
+.card-flip {
+  perspective: 1000px;
+  background-color: transparent;
+  min-height: 240px;
+  height: 100%;
+  width: 100%;
+
+  &:hover .card-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); // Transición fluida y elegante
+  transform-style: preserve-3d;
+}
+
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: $radio-borde;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $sombra-suave;
+}
+
+.card-flip-front {
+  @extend %tarjeta-base;
+  transform: rotateY(0deg);
+  background-color: $color-fondo;
+  @include transicion-suave(all, 0.3s, ease);
+}
+
+.card-flip-back {
+  @extend %tarjeta-base;
+  transform: rotateY(180deg);
+  background-color: $color-tarjeta-bg;
+  border: 1px solid rgba($color-primario, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-flip {
+  perspective: 1000px;
+
+  // Se activa con hover (desktop) o al recibir toque/foco (mobile)
+  &:hover .card-flip-inner,
+  &:focus .card-flip-inner,
+  &:focus-within .card-flip-inner {
+    transform: rotateY(180deg);
+  }
 }

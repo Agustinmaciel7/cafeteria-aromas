@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
 .titulo-principal {
   font-size: 2.2rem;
   font-weight: 700;
@@ -49,7 +48,6 @@ a {
   transition: all 0.3s ease;
   text-decoration: none;
 }
-
 a:active {
   transform: scale(0.95);
 }
@@ -60,14 +58,12 @@ a:active {
   margin: 1.5rem auto;
   flex: 1;
 }
-
 @media (min-width: 768px) {
   .main-contenido {
     width: 90%;
     margin: 2rem auto;
   }
 }
-
 @media (min-width: 1024px) {
   .main-contenido {
     margin: 2.5rem auto;
@@ -82,13 +78,11 @@ a:active {
   display: block;
   width: 100%;
 }
-
 @media (min-width: 768px) {
   .seccion-contenido {
     padding: 2rem;
   }
 }
-
 @media (min-width: 1024px) {
   .seccion-contenido {
     padding: 2.5rem;
@@ -111,6 +105,12 @@ figure {
   object-fit: cover;
   border-radius: 8px;
 }
+@media (min-width: 768px) {
+  .imagen-destacada {
+    max-width: 680px;
+    max-height: 350px;
+  }
+}
 
 figcaption {
   font-size: 0.9rem;
@@ -126,32 +126,25 @@ figcaption {
 }
 
 @keyframes latidoLogo {
-
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 5px rgba(215, 204, 200, 0.3);
     transform: scale(1);
   }
-
   50% {
     box-shadow: 0 0 16px rgba(215, 204, 200, 0.85);
     transform: scale(1.04);
   }
 }
-
 nav.navbar.navbar-custom {
   background-color: #4a2c2a;
   padding: 8px 20px;
 }
-
 nav.navbar.navbar-custom .navbar-brand {
   padding: 0;
 }
-
 nav.navbar.navbar-custom .navbar-toggler {
   border-color: rgba(253, 251, 247, 0.5);
 }
-
 nav.navbar.navbar-custom .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(253, 251, 247, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -164,7 +157,6 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   animation: latidoLogo 2.5s infinite ease-in-out;
   transition: all 0.3s ease;
 }
-
 .logo-header:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px #d7ccc8;
@@ -177,12 +169,9 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   margin: 0 10px;
   transition: all 0.3s ease;
 }
-
-.navbar-custom .navbar-nav .nav-link:hover,
-.navbar-custom .navbar-nav .nav-link:focus {
+.navbar-custom .navbar-nav .nav-link:hover, .navbar-custom .navbar-nav .nav-link:focus {
   color: #d7ccc8;
 }
-
 .navbar-custom .navbar-nav .nav-link:active {
   transform: scale(0.95);
 }
@@ -209,19 +198,16 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   font-weight: 600;
   transition: all 0.25s ease-in-out;
 }
-
-.btn-cafe:hover,
-.btn-cafe:focus {
+.btn-cafe:hover, .btn-cafe:focus {
   background-color: #3e2723;
   color: #d7ccc8;
   transform: scale(1.02);
 }
-
 s .btn-cafe:active {
   transform: scale(0.98);
 }
 
-.tarjeta-articulo {
+.card-flip-back, .card-flip-front, .tarjeta-articulo {
   border-radius: 8px;
   background-color: #fdfbf7;
   padding: 20px;
@@ -233,16 +219,13 @@ s .btn-cafe:active {
   0% {
     transform: translateY(-5px);
   }
-
   50% {
     transform: translateY(-8px);
   }
-
   100% {
     transform: translateY(-5px);
   }
 }
-
 .tarjeta-articulo {
   display: flex;
   flex-direction: column;
@@ -251,7 +234,6 @@ s .btn-cafe:active {
   margin: 0 auto;
   transition: all 0.3s ease;
 }
-
 .tarjeta-articulo:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   background-color: #f2ebe1;
@@ -274,6 +256,67 @@ s .btn-cafe:active {
   background-color: rgba(74, 44, 42, 0.7);
   border-radius: 8px;
   padding: 15px;
+}
+
+.card-flip {
+  perspective: 1000px;
+  background-color: transparent;
+  min-height: 240px;
+  height: 100%;
+  width: 100%;
+}
+.card-flip:hover .card-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.card-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-flip-front,
+.card-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.card-flip-front {
+  transform: rotateY(0deg);
+  background-color: #fdfbf7;
+  transition: all 0.3s ease;
+}
+
+.card-flip-back {
+  transform: rotateY(180deg);
+  background-color: #f2ebe1;
+  border: 1px solid rgba(74, 44, 42, 0.15);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-flip {
+  perspective: 1000px;
+}
+.card-flip:hover .card-flip-inner, .card-flip:focus .card-flip-inner, .card-flip:focus-within .card-flip-inner {
+  transform: rotateY(180deg);
 }
 
 /*# sourceMappingURL=styles.css.map */
