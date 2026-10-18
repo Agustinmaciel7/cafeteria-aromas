@@ -1,33 +1,35 @@
+Markdown
 # ☕ Cafetería Aromas - Sitio Web Institucional
 
-¡Bienvenido/a a mi repositorio! Este proyecto forma parte de mi formación en el curso de **Desarrollo Web Full Stack en Coderhouse** (Entrega: Animaciones y Full-Responsive).
+¡Bienvenido/a a mi repositorio! Este proyecto forma parte de mi formación en el curso de **Desarrollo Web Full Stack en Coderhouse** (Anteúltima Entrega: SEO On-Page, Accesibilidad y Reestructuración de Interfaces)[cite: 1, 10].
 
 ---
 
 ## 🔗 Enlaces del Proyecto
 
-* **Repositorio de GitHub:** [Ver Repositorio en GitHub](https://github.com/Agustinmaciel7/cafeteria-aromas)[cite: 7, 10]
-* **Sitio Desplegado:** [Ver Sitio Web en GitHub Pages](https://agustinmaciel7.github.io/cafeteria-aromas/)[cite: 7, 10]
+* **Repositorio de GitHub:** [https://github.com/Agustinmaciel7/cafeteria-aromas](https://github.com/Agustinmaciel7/cafeteria-aromas)[cite: 7]
+* **Sitio Desplegado:** [https://agustinmaciel7.github.io/cafeteria-aromas/](https://agustinmaciel7.github.io/cafeteria-aromas/)
 
 ---
 
-## 🚀 Estado del Proyecto y Avances Actuales (Módulo 8)
+## 🚀 Estado del Proyecto y Reestructuración Visual
 
-El sitio cuenta con una maquetación 100% responsiva (de 375px a 1400px+) e incorpora animaciones nativas en SCSS junto con interacciones mediante librerías externas en los 5 archivos HTML[cite: 1, 2, 5].
+El proyecto cuenta con un maquetado 100% responsivo, optimizaciones SEO de etiquetas y accesibilidad web, junto con una arquitectura de diseño refinada en cada vista.
 
 ### 🛠️ Características Implementadas
 
-- [x] **Librería de Animaciones Externa (AOS):** Integración de **Animate On Scroll** vía CDN en los 5 archivos HTML con atributos `data-aos="fade-up"`, `data-aos="zoom-in"` y `data-aos="fade-down"`[cite: 5].
-- [x] **SCSS Avanzado:**
-  - Mixins con parámetros: `@mixin transicion-suave($prop, $duracion, $timing)` y `@mixin respond-to($breakpoint)`[cite: 1].
-  - Herencia de estilos con `@extend`: Uso del placeholder `%tarjeta-base` en componentes[cite: 1].
-- [x] **Animación Nativa desde SCSS:** Definición de la regla `@keyframes flotarSutil` para lograr un movimiento dinámico y sutil al pasar el cursor (`:hover`) sobre las tarjetas[cite: 1, 2].
-- [x] **Responsividad Completa (Mobile-First):**
-  - **Base (Mobile 375px):** Sin media query, disposición apilada y fluida.
-  - **Tablet (`@media (min-width: 768px)`):** Ajuste de grillas intermedias de 2 columnas.
-  - **Escritorio (`@media (min-width: 1024px)`):** Layout completo de múltiples columnas y márgenes centrados.
-  - **Cero scroll horizontal:** Ajustes adaptativos para asegurar la correcta lectura sin superposiciones en todas las resoluciones.
-- [x] **Arquitectura SCSS Intacta:** Preservación de la estructura modular (`utilities/`, `base/`, `layout/` y `components/`) con `main.scss` como único punto de entrada[cite: 1, 2].
+- [x] **SEO On-Page & Accesibilidad (Módulo Actual):**
+  - `<title>` enriquecidos con palabras clave estratégicas por página.
+  - Etiquetas `<meta name="description">` personalizadas en el `<head>` de los 5 archivos HTML[cite: 1].
+  - Textos alternativos (`alt`) explicativos en todas las imágenes del sitio[cite: 1].
+  - Jerarquía semántica única (`<h1>` principal) y contraste cromático accesible (WCAG AA)[cite: 1].
+- [x] **Reestructuración de Vistas:**
+  - **Inicio (`index.html`):** Maquetación en 2 columnas con imagen principal nivelada y *3D Flip Cards* interactivas.
+  - **Sobre Nosotros (`pages/sobre-mi.html`):** Diseño editorial de una sola columna, desarrollo narrativo con fechas (2018-2026) y foto destacada del equipo[cite: 8].
+  - **Menú (`pages/servicios.html`):** Carrusel de especialidades con altura pareja a 380px y grilla de categorías[cite: 8, 13].
+  - **Preguntas Frecuentes (`pages/proyectos.html`):** Formato Pregunta y Respuesta con tarjetas directas[cite: 8].
+  - **Contacto (`pages/contacto.html`):** Layout simétrico con imagen en portada, canales telefónicos/WhatsApp y formulario compacto[cite: 8].
+- [x] **Arquitectura SCSS Intacta:** Organización en partials (`utilities/`, `base/`, `layout/` y `components/`) compilados automáticamente a `styles/styles.css` mediante `main.scss`.
 
 ---
 
@@ -35,26 +37,43 @@ El sitio cuenta con una maquetación 100% responsiva (de 375px a 1400px+) e inco
 
 ```text
 /
-├── index.html                  # Página de inicio principal
+├── index.html                  # Página de inicio (Hero section & Flip Cards)
 ├── README.md                   # Documentación oficial del repositorio
 ├── styles/
-│   └── styles.css              # CSS final compilado por Sass
-├── scss/                       # Código fuente SCSS
+│   └── styles.css              # Hoja de estilos final compilada por Sass
+├── scss/                       # Código fuente SCSS modular
 │   ├── main.scss              # Punto de entrada principal (@use)
 │   ├── utilities/
 │   │   ├── _variables.scss
-│   │   └── _mixins.scss        # Mixins con parámetros
+│   │   └── _mixins.scss
 │   ├── base/
 │   │   ├── _tipografia.scss
-│   │   └── _base.scss          # Estilos globales y breakpoints
+│   │   └── _base.scss
 │   ├── layout/
 │   │   ├── _header.scss
 │   │   ├── _nav.scss
 │   │   └── _footer.scss
 │   └── components/
 │       ├── _buttons.scss
-│       └── _cards.scss        # @extend, @keyframes y tarjetas
-├── assets/                     # Imágenes e imatotipos institucionales
-└── pages/                      # Páginas secundarias (sobre-mi, servicios, proyectos, contacto)
-🛠️ Tecnologías UtilizadasHTML5 & CSS3Sass / SCSS (Compilador vía Node.js)   Bootstrap v5.3+ (CDN)   AOS Library (Animate On Scroll)Git & GitHub[cite: 2, 7, 10]
-Autor: Agustín — Desarrollador Web en formación
+│       └── _cards.scss
+├── assets/                     # Recursos gráficos con nombres descriptivos
+└── pages/                      # Páginas secundarias del sitio
+    ├── sobre-mi.html           # Sobre Nosotros (Historia narrativa)
+    ├── servicios.html          # Menú de especialidades (Carrusel)
+    ├── proyectos.html          # Preguntas Frecuentes
+    └── contacto.html           # Canales de atención y formulario
+
+    🛠️ Tecnologías Utilizadas
+HTML5 & CSS3 (Semántico y Accesible)[cite: 1]
+
+Sass / SCSS (Compilador con Node.js)[cite: 1, 8]
+
+Bootstrap v5.3+ (CDN)[cite: 1, 8]
+
+AOS Library (Animate On Scroll)[cite: 8]
+
+Git & GitHub
+
+
+Autor
+Agustín — Desarrollador Web en formación
