@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contacto - Cafetería Aromas</title>
+  <title>Contacto y Consultas Directas | Cafetería Aromas</title>
+  <meta name="description"
+    content="¿Tenés dudas o consultas? Comunicate con Cafetería Aromas por WhatsApp, teléfono fijo o completá nuestro formulario de contacto en línea.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
   <link rel="stylesheet" href="../styles/styles.css">
@@ -16,7 +18,7 @@
     <nav class="navbar navbar-expand-lg navbar-custom">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
-          <img src="../assets/LOGO-CAFETERIA.jpg" alt="Logo Cafetería Aromas" class="logo-header">
+          <img src="../assets/LOGO-CAFETERIA.jpg" alt="Logo oficial de Cafetería Aromas" class="logo-header">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion"
           aria-controls="menuNavegacion" aria-expanded="false" aria-label="Menú">
@@ -37,51 +39,87 @@
 
   <main class="main-contenido">
     <h1 class="titulo-principal mb-5" data-aos="fade-down">Contáctanos</h1>
+
     <section class="seccion-contenido d-block" data-aos="fade-up">
+      <div class="row align-items-stretch">
 
-      <div class="row align-items-center">
-        <!-- Columna Izquierda: Info e Imagen -->
-        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start" data-aos="fade-right" data-aos-delay="100">
-          <h2 class="subtitulo mb-3">Envíanos tu mensaje o visítanos</h2>
-          <p class="texto-parrafo mb-4">¿Tenés alguna consulta, querés hacer una reserva para un evento o simplemente
-            querés dejarnos tus comentarios? Nos encanta escuchar a nuestra comunidad.</p>
-          <img src="../assets/foto_contacto.jpg" alt="Información de contacto del local"
-            class="imagen-destacada shadow-sm">
-        </div>
+        <!-- Columna Izquierda: Tarjeta Unificada con Portada e Información Directa -->
+        <div class="col-md-6 mb-4 mb-md-0 d-flex" data-aos="fade-right" data-aos-delay="100">
+          <div
+            class="card w-100 border-0 shadow-sm tarjeta-articulo overflow-hidden d-flex flex-column justify-content-between p-0">
 
-        <!-- Columna Derecha: Tarjetas de Información (Animan las 3 juntas) -->
-        <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
-          <div class="d-flex flex-column gap-3">
+            <!-- Imagen integrada como portada de la tarjeta -->
+            <img src="../assets/foto_contacto.jpg"
+              alt="Mesas y ambiente cálido de Cafetería Aromas preparado para atención al cliente"
+              class="card-img-top object-fit-cover" height="180">
 
-            <!-- WhatsApp -->
-            <div class="card border-0 shadow-sm p-3 tarjeta-articulo flex-row text-start align-items-center">
-              <div class="fs-1 me-3">📱</div>
+            <!-- Cuerpo con texto y canales de comunicación -->
+            <div class="p-4 d-flex flex-column gap-3 text-start flex-grow-1">
               <div>
-                <h4 class="mb-1 texto-destacado">WhatsApp</h4>
-                <p class="mb-0 texto-parrafo">+54 9 11 1234-5678</p>
+                <h2 class="subtitulo h5 mb-2">¿Te quedaste con más dudas?</h2>
+                <p class="texto-parrafo mb-0">
+                  Consultanos directamente mediante WhatsApp o nuestra línea fija, o déjanos tu mensaje vía e-mail a
+                  través del formulario de contacto.
+                </p>
               </div>
-            </div>
 
-            <!-- Email -->
-            <div class="card border-0 shadow-sm p-3 tarjeta-articulo flex-row text-start align-items-center">
-              <div class="fs-1 me-3">✉️</div>
-              <div>
-                <h4 class="mb-1 texto-destacado">Email</h4>
-                <p class="mb-0 texto-parrafo">hola@cafeteriaaromas.com</p>
-              </div>
-            </div>
+              <!-- Bloques de contacto rápido -->
+              <div class="d-flex flex-column gap-2 mt-auto">
+                <div class="p-3 border rounded-3 bg-white d-flex align-items-center">
+                  <div class="fs-3 me-3">💬</div>
+                  <div>
+                    <h3 class="h6 mb-1 texto-destacado">WhatsApp Directo</h3>
+                    <p class="mb-0 texto-parrafo">+54 9 11 1234-5678</p>
+                  </div>
+                </div>
 
-            <!-- Ubicación -->
-            <div class="card border-0 shadow-sm p-3 tarjeta-articulo flex-row text-start align-items-center">
-              <div class="fs-1 me-3">📍</div>
-              <div>
-                <h4 class="mb-1 texto-destacado">Ubicación</h4>
-                <p class="mb-0 texto-parrafo">Av. Corrientes 1234, CABA</p>
+                <div class="p-3 border rounded-3 bg-white d-flex align-items-center">
+                  <div class="fs-3 me-3">📞</div>
+                  <div>
+                    <h3 class="h6 mb-1 texto-destacado">Línea Fija</h3>
+                    <p class="mb-0 texto-parrafo">+54 11 4321-8765</p>
+                  </div>
+                </div>
               </div>
+
             </div>
 
           </div>
         </div>
+
+        <!-- Columna Derecha: Formulario de Contacto en E-mail -->
+        <div class="col-md-6 d-flex" data-aos="fade-left" data-aos-delay="200">
+          <div
+            class="card w-100 border-0 shadow-sm p-4 tarjeta-articulo text-start d-flex flex-column justify-content-between">
+            <h3 class="subtitulo mb-4 text-center">Escribinos tu mensaje</h3>
+
+            <form class="w-100 d-flex flex-column gap-3">
+              <div class="form-floating">
+                <input type="text" class="form-control" id="nombreContacto" placeholder="Tu nombre" required>
+                <label for="nombreContacto">Nombre completo</label>
+              </div>
+
+              <div class="form-floating">
+                <input type="email" class="form-control" id="emailContacto" placeholder="nombre@ejemplo.com" required>
+                <label for="emailContacto">Correo electrónico</label>
+              </div>
+
+              <div class="form-floating">
+                <input type="text" class="form-control" id="asuntoContacto" placeholder="Asunto">
+                <label for="asuntoContacto">Asunto de la consulta</label>
+              </div>
+
+              <div class="form-floating">
+                <textarea class="form-control" id="mensajeContacto" placeholder="Escribí tu mensaje acá..." rows="4"
+                  required></textarea>
+                <label for="mensajeContacto">Tu mensaje o consulta...</label>
+              </div>
+
+              <button type="submit" class="btn btn-cafe w-100 py-2 mt-auto">Enviar mensaje por e-mail</button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </section>
   </main>
