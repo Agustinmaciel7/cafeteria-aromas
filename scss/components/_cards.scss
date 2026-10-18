@@ -1,16 +1,16 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-// Placeholder para herencia de estilos con @extend
+// Placeholder para herencia con @extend
 %tarjeta-base {
   border-radius: $radio-borde;
   background-color: $color-fondo;
-  padding: 16px;
+  padding: 20px;
   text-align: center;
   box-shadow: $sombra-suave;
 }
 
-// Animación nativa desde SCSS con @keyframes
+// Animación de flotación
 @keyframes flotarSutil {
   0% {
     transform: translateY(-5px);
@@ -33,6 +33,7 @@
   align-items: center;
   gap: 15px;
   margin: 0 auto;
+  position: relative;
   @include transicion-suave(all, 0.3s, ease);
 
   &:hover {
@@ -49,55 +50,73 @@
   perspective: 1000px;
   background-color: transparent;
   width: 100%;
-  min-height: 120px;
+  min-height: 160px; // Espacio vertical suficiente para mobile
 
   &:hover .card-flip-inner,
   &:focus .card-flip-inner,
   &:focus-within .card-flip-inner {
     transform: rotateY(180deg);
   }
-}
 
-.card-flip-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transform-style: preserve-3d;
-}
+  .card-flip-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+  }
 
-.card-flip-front,
-.card-flip-back {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  border-radius: $radio-borde;
-  box-shadow: $sombra-suave;
-  padding: 12px 16px;
-  /* Padding compacto que acordamos */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .card-flip-front,
+  .card-flip-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: $radio-borde;
+    box-shadow: $sombra-suave;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.card-flip-front {
-  @extend %tarjeta-base;
-  transform: rotateY(0deg);
-  background-color: $color-fondo;
-  @include transicion-suave(all, 0.3s, ease);
-}
+  .card-flip-front {
+    @extend %tarjeta-base;
+    transform: rotateY(0deg);
+    background-color: $color-fondo;
+    justify-content: flex-start;
+    padding-top: 36px; // 👈 Genera el colchón de espacio superior sin necesidad de !important
+    padding-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include transicion-suave(all, 0.3s, ease);
 
-.card-flip-back {
-  @extend %tarjeta-base;
-  transform: rotateY(180deg);
-  background-color: $color-tarjeta-bg;
-  border: 1px solid rgba($color-primario, 0.15);
+    // Anidamiento de la etiqueta/badge para mayor especificidad en SCSS
+    .badge {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-bottom: 0;
+      z-index: 2;
+    }
+
+    .subtitulo {
+      margin-top: 4px; // Espacio suave hacia abajo
+    }
+  }
+
+  .card-flip-back {
+    @extend %tarjeta-base;
+    transform: rotateY(180deg);
+    background-color: $color-tarjeta-bg;
+    border: 1px solid rgba($color-primario, 0.15);
+    justify-content: center;
+    padding: 16px;
+  }
 }
 
 /* ==========================================
@@ -111,7 +130,6 @@
 #carruselMenu .carousel-item img {
   width: 100%;
   height: 380px;
-  /* Altura fija parejera */
   object-fit: cover;
   object-position: center;
   border-radius: $radio-borde;
@@ -123,22 +141,8 @@
   padding: 12px 18px;
 }
 
-/* Ajuste responsivo en celulares */
 @media (max-width: 576px) {
   #carruselMenu .carousel-item img {
     height: 280px;
-  }
-
-  .carousel-caption {
-    padding: 8px 10px;
-
-    h3,
-    h5 {
-      font-size: 1rem;
-    }
-
-    p {
-      font-size: 0.8rem;
-    }
   }
 }
