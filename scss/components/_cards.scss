@@ -1,7 +1,7 @@
 @use '../utilities/variables' as *;
 @use '../utilities/mixins' as *;
 
-// Placeholder base para tarjetas
+// Placeholder para herencia de estilos con @extend
 %tarjeta-base {
   border-radius: $radio-borde;
   background-color: $color-fondo;
@@ -10,7 +10,22 @@
   box-shadow: $sombra-suave;
 }
 
-// Estilos para tarjetas estáticas
+// Animación nativa desde SCSS con @keyframes
+@keyframes flotarSutil {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+
+  100% {
+    transform: translateY(-5px);
+  }
+}
+
+// 1. Tarjetas Estándar
 .tarjeta-articulo {
   @extend %tarjeta-base;
   display: flex;
@@ -23,17 +38,18 @@
   &:hover {
     box-shadow: $sombra-hover;
     background-color: $color-tarjeta-bg;
+    animation: flotarSutil 1.8s infinite ease-in-out;
   }
 }
 
 /* ==========================================
-   FLIP CARDS 3D - INICIO (Padding compacto)
+   2. EFECTO CARD FLIP 3D (INICIO)
    ========================================== */
 .card-flip {
   perspective: 1000px;
   background-color: transparent;
   width: 100%;
-  min-height: 120px; /* Reducido para nivelar la altura */
+  min-height: 120px;
 
   &:hover .card-flip-inner,
   &:focus .card-flip-inner,
@@ -47,20 +63,23 @@
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
 
 .card-flip-front,
 .card-flip-back {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: $radio-borde;
   box-shadow: $sombra-suave;
-  padding: 12px 16px; /* Padding reducido de 20px a 12px para reducir altura */
+  padding: 12px 16px;
+  /* Padding compacto que acordamos */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,14 +87,58 @@
 }
 
 .card-flip-front {
-  background-color: #ffffff;
-  color: $color-secundario;
-  border: 1px solid rgba($color-primario, 0.1);
+  @extend %tarjeta-base;
+  transform: rotateY(0deg);
+  background-color: $color-fondo;
+  @include transicion-suave(all, 0.3s, ease);
 }
 
 .card-flip-back {
-  background-color: $color-fondo;
-  color: $color-secundario;
+  @extend %tarjeta-base;
   transform: rotateY(180deg);
+  background-color: $color-tarjeta-bg;
   border: 1px solid rgba($color-primario, 0.15);
+}
+
+/* ==========================================
+   3. CARROUSEL DE BOOTSTRAP (MENÚ)
+   ========================================== */
+.carousel-inner {
+  border-radius: $radio-borde;
+  box-shadow: $sombra-suave;
+}
+
+#carruselMenu .carousel-item img {
+  width: 100%;
+  height: 380px;
+  /* Altura fija parejera */
+  object-fit: cover;
+  object-position: center;
+  border-radius: $radio-borde;
+}
+
+.carousel-caption {
+  background-color: rgba($color-primario, 0.75);
+  border-radius: $radio-borde;
+  padding: 12px 18px;
+}
+
+/* Ajuste responsivo en celulares */
+@media (max-width: 576px) {
+  #carruselMenu .carousel-item img {
+    height: 280px;
+  }
+
+  .carousel-caption {
+    padding: 8px 10px;
+
+    h3,
+    h5 {
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 0.8rem;
+    }
+  }
 }

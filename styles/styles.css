@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 .titulo-principal {
   font-size: 2.2rem;
@@ -207,7 +208,7 @@ s .btn-cafe:active {
   transform: scale(0.98);
 }
 
-.tarjeta-articulo {
+.card-flip-back, .card-flip-front, .tarjeta-articulo {
   border-radius: 8px;
   background-color: #fdfbf7;
   padding: 16px;
@@ -215,6 +216,17 @@ s .btn-cafe:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+@keyframes flotarSutil {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
 .tarjeta-articulo {
   display: flex;
   flex-direction: column;
@@ -226,16 +238,17 @@ s .btn-cafe:active {
 .tarjeta-articulo:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   background-color: #f2ebe1;
+  animation: flotarSutil 1.8s infinite ease-in-out;
 }
 
 /* ==========================================
-   FLIP CARDS 3D - INICIO (Padding compacto)
+   2. EFECTO CARD FLIP 3D (INICIO)
    ========================================== */
 .card-flip {
   perspective: 1000px;
   background-color: transparent;
   width: 100%;
-  min-height: 120px; /* Reducido para nivelar la altura */
+  min-height: 120px;
 }
 .card-flip:hover .card-flip-inner, .card-flip:focus .card-flip-inner, .card-flip:focus-within .card-flip-inner {
   transform: rotateY(180deg);
@@ -246,20 +259,23 @@ s .btn-cafe:active {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
 
 .card-flip-front,
 .card-flip-back {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  padding: 12px 16px; /* Padding reducido de 20px a 12px para reducir altura */
+  padding: 12px 16px;
+  /* Padding compacto que acordamos */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -267,16 +283,55 @@ s .btn-cafe:active {
 }
 
 .card-flip-front {
-  background-color: #ffffff;
-  color: #3e2723;
-  border: 1px solid rgba(74, 44, 42, 0.1);
+  transform: rotateY(0deg);
+  background-color: #fdfbf7;
+  transition: all 0.3s ease;
 }
 
 .card-flip-back {
-  background-color: #fdfbf7;
-  color: #3e2723;
   transform: rotateY(180deg);
+  background-color: #f2ebe1;
   border: 1px solid rgba(74, 44, 42, 0.15);
+}
+
+/* ==========================================
+   3. CARROUSEL DE BOOTSTRAP (MENÚ)
+   ========================================== */
+.carousel-inner {
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+#carruselMenu .carousel-item img {
+  width: 100%;
+  height: 380px;
+  /* Altura fija parejera */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+.carousel-caption {
+  background-color: rgba(74, 44, 42, 0.75);
+  border-radius: 8px;
+  padding: 12px 18px;
+}
+
+/* Ajuste responsivo en celulares */
+@media (max-width: 576px) {
+  #carruselMenu .carousel-item img {
+    height: 280px;
+  }
+  .carousel-caption {
+    padding: 8px 10px;
+  }
+  .carousel-caption h3,
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
