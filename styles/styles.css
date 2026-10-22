@@ -1,6 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
-
 .titulo-principal {
   font-size: 2.2rem;
   font-weight: 700;
@@ -50,7 +49,6 @@ a {
   transition: all 0.3s ease;
   text-decoration: none;
 }
-
 a:active {
   transform: scale(0.95);
 }
@@ -61,14 +59,12 @@ a:active {
   margin: 1.5rem auto;
   flex: 1;
 }
-
 @media (min-width: 768px) {
   .main-contenido {
     width: 90%;
     margin: 2rem auto;
   }
 }
-
 @media (min-width: 1024px) {
   .main-contenido {
     margin: 2.5rem auto;
@@ -83,13 +79,11 @@ a:active {
   display: block;
   width: 100%;
 }
-
 @media (min-width: 768px) {
   .seccion-contenido {
     padding: 2rem;
   }
 }
-
 @media (min-width: 1024px) {
   .seccion-contenido {
     padding: 2.5rem;
@@ -112,7 +106,6 @@ figure {
   object-fit: cover;
   border-radius: 8px;
 }
-
 @media (min-width: 768px) {
   .imagen-destacada {
     max-width: 680px;
@@ -134,32 +127,25 @@ figcaption {
 }
 
 @keyframes latidoLogo {
-
-  0%,
-  100% {
+  0%, 100% {
     box-shadow: 0 0 5px rgba(215, 204, 200, 0.3);
     transform: scale(1);
   }
-
   50% {
     box-shadow: 0 0 16px rgba(215, 204, 200, 0.85);
     transform: scale(1.04);
   }
 }
-
 nav.navbar.navbar-custom {
   background-color: #4a2c2a;
   padding: 8px 20px;
 }
-
 nav.navbar.navbar-custom .navbar-brand {
   padding: 0;
 }
-
 nav.navbar.navbar-custom .navbar-toggler {
   border-color: rgba(253, 251, 247, 0.5);
 }
-
 nav.navbar.navbar-custom .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(253, 251, 247, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -172,7 +158,6 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   animation: latidoLogo 2.5s infinite ease-in-out;
   transition: all 0.3s ease;
 }
-
 .logo-header:hover {
   transform: scale(1.08);
   box-shadow: 0 0 20px #d7ccc8;
@@ -185,12 +170,9 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   margin: 0 10px;
   transition: all 0.3s ease;
 }
-
-.navbar-custom .navbar-nav .nav-link:hover,
-.navbar-custom .navbar-nav .nav-link:focus {
+.navbar-custom .navbar-nav .nav-link:hover, .navbar-custom .navbar-nav .nav-link:focus {
   color: #d7ccc8;
 }
-
 .navbar-custom .navbar-nav .nav-link:active {
   transform: scale(0.95);
 }
@@ -217,21 +199,16 @@ nav.navbar.navbar-custom .navbar-toggler-icon {
   font-weight: 600;
   transition: all 0.25s ease-in-out;
 }
-
-.btn-cafe:hover,
-.btn-cafe:focus {
+.btn-cafe:hover, .btn-cafe:focus {
   background-color: #3e2723;
   color: #d7ccc8;
   transform: scale(1.02);
 }
-
 s .btn-cafe:active {
   transform: scale(0.98);
 }
 
-.card-flip .card-flip-back,
-.card-flip .card-flip-front,
-.tarjeta-articulo {
+.card-flip .card-flip-back, .card-flip .card-flip-front, .tarjeta-articulo {
   border-radius: 8px;
   background-color: #fdfbf7;
   padding: 20px;
@@ -243,16 +220,13 @@ s .btn-cafe:active {
   0% {
     transform: translateY(-5px);
   }
-
   50% {
     transform: translateY(-8px);
   }
-
   100% {
     transform: translateY(-5px);
   }
 }
-
 .tarjeta-articulo {
   display: flex;
   flex-direction: column;
@@ -262,7 +236,6 @@ s .btn-cafe:active {
   position: relative;
   transition: all 0.3s ease;
 }
-
 .tarjeta-articulo:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   background-color: #f2ebe1;
@@ -278,13 +251,9 @@ s .btn-cafe:active {
   width: 100%;
   min-height: 160px;
 }
-
-.card-flip:hover .card-flip-inner,
-.card-flip:focus .card-flip-inner,
-.card-flip:focus-within .card-flip-inner {
+.card-flip:hover .card-flip-inner, .card-flip:focus .card-flip-inner, .card-flip:focus-within .card-flip-inner {
   transform: rotateY(180deg);
 }
-
 .card-flip .card-flip-inner {
   position: relative;
   width: 100%;
@@ -293,7 +262,6 @@ s .btn-cafe:active {
   transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
   transform-style: preserve-3d;
 }
-
 .card-flip .card-flip-front,
 .card-flip .card-flip-back {
   position: absolute;
@@ -309,7 +277,6 @@ s .btn-cafe:active {
   flex-direction: column;
   align-items: center;
 }
-
 .card-flip .card-flip-front {
   transform: rotateY(0deg);
   background-color: #fdfbf7;
@@ -320,7 +287,6 @@ s .btn-cafe:active {
   padding-right: 16px;
   transition: all 0.3s ease;
 }
-
 .card-flip .card-flip-front .badge {
   position: absolute;
   top: 10px;
@@ -329,11 +295,9 @@ s .btn-cafe:active {
   margin-bottom: 0;
   z-index: 2;
 }
-
 .card-flip .card-flip-front .subtitulo {
   margin-top: 4px;
 }
-
 .card-flip .card-flip-back {
   transform: rotateY(180deg);
   background-color: #f2ebe1;
@@ -350,23 +314,28 @@ s .btn-cafe:active {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+#carruselMenu {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
 #carruselMenu .carousel-item img {
   width: 100%;
-  height: 380px;
+  height: 350px;
   object-fit: cover;
   object-position: center;
   border-radius: 8px;
 }
 
 .carousel-caption {
-  background-color: rgba(74, 44, 42, 0.75);
+  background-color: rgba(74, 44, 42, 0.8);
   border-radius: 8px;
   padding: 12px 18px;
 }
 
 @media (max-width: 576px) {
   #carruselMenu .carousel-item img {
-    height: 280px;
+    height: 250px;
   }
 }
 
