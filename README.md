@@ -7,7 +7,7 @@
 ## 🔗 Enlaces del Proyecto
 
 * Repositorio en GitHub: https://github.com/Agustinmaciel7/cafeteria-aromas
-* Sitio Desplegado: https://cafeteria-aromas.vercel.app/
+* Sitio Desplegado en Vercel: https://cafeteria-aromas.vercel.app/
 
 ---
 
@@ -46,6 +46,7 @@ El sitio consiste en una plataforma estática de 5 páginas completamente respon
 
 ## 📁 Estructura de Archivos del Repositorio
 
+```text
 /
 ├── index.html                  # Inicio (Hero section y 3D Flip Cards)
 ├── README.md                   # Documentación oficial del proyecto
@@ -72,20 +73,18 @@ El sitio consiste en una plataforma estática de 5 páginas completamente respon
     ├── servicios.html          # Menú de especialidades (Carrusel y categorías)
     ├── proyectos.html          # Preguntas Frecuentes (Q&A)
     └── contacto.html           # Canales de atención directa y formulario
-    
----
+    🛠️ Tecnologías Utilizadas
+HTML5 & CSS3
 
-## 🛠️ Tecnologías Utilizadas
+Sass / SCSS (Compilador con Node.js)
 
-* HTML5 & CSS3
-* Sass / SCSS (Compilador con Node.js)
-* Bootstrap v5.3+ (CDN)
-* AOS Library (Animate On Scroll)
-* Git & GitHub (Control de versiones)
-* Vercel / Netlify (Servidor y despliegue en producción)
+Bootstrap v5.3+ (CDN)
 
----
+AOS Library (Animate On Scroll)
 
-## 👤 Autor
+Git & GitHub (Control de versiones)
 
-* Agustín — Desarrollador Web en formación
+Vercel / Netlify (Servidor y despliegue en producción)
+
+👤 Autor
+Agustín — Desarrollador Web en formación
